@@ -11,7 +11,7 @@ socket.emit('new-user', name)
 socket.on('user-connected', name => {
     appendMessage(`${name} connected`)
 })
-
+// add event listner for prevent default means we dont get page relode
 function appendMessage(message){
     const messageElement = document.createElement('div');
     messageElement.innerText = message; 
